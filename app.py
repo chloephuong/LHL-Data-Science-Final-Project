@@ -6,7 +6,7 @@ def main():
 
     # User inputs
     rest_name = st.text_input("Enter a restaurant name")
-    rating_tolerance = st.slider("Rating Tolerance", 1.0, 5.0, step=0.1)
+    rating_tolerance = st.slider("Rating Tolerance", 1.0, 4.5, step=0.5)
 
     # Button to trigger recommendation
     button_clicked = st.button("Get Recommendations")
@@ -20,6 +20,7 @@ def main():
             st.write("Address:", row['address'])
             st.write("Average Rating:", row['rest_avg_stars'])
             st.write("Categories:", row['categories'])
+            st.write("---")  # Add a separator between recommendations
 
 if __name__ == '__main__':
     main()
