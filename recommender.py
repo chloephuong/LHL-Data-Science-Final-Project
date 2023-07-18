@@ -72,7 +72,7 @@ def restaurant_recommendations(rest_name, rating_tolerance):
     assert isinstance(rating_tolerance, float), 'rating_tolerance should be a float (i.e. number with a decimal)'
 
     #Setting an assertion on the rating_tolerance to only accept an input, difference threshold, between 1.0 and 4.0 given the Yelp rating scale of 1 through 5
-    assert 1.0 <= rating_tolerance <= 4.0, 'rating_tolerance should be between 1.0 and 4.0, given the Yelp rating scale of 1 through 5'
+    assert 1.0 <= rating_tolerance <= 4.5, 'rating_tolerance should be between 1.0 and 4.5, given the Yelp rating scale of 1 through 5'
 
     # Filter restaurants based on rating tolerance
     filtered_restaurants = final_restrev_df[final_restrev_df['rest_avg_stars'] >= rating_tolerance]
